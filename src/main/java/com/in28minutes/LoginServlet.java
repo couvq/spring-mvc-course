@@ -14,7 +14,14 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PrintWriter writer = response.getWriter();
-		writer.println("Some Dummy Stuff");
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("My First Servlet");
+		out.println("</body>");
+		out.println("</html>");
 	}
 }
