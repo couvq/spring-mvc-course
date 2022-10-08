@@ -5,6 +5,6 @@
 	</head>
 	
 	<body>
-		<h1>My First JSP!</h1>
+		<h1>${ name }'s First JSP!</h1>
 	</body>
 </html>
