@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>My First JSP</title>
-	</head>
-	
-	<body>
-		<h1>Welcome ${name}, your password is ${password}</h1>
-	</body>
+<head>
+<title>My First JSP</title>
+</head>
+
+<body>
+	<form action="/login.do" method="post">
+		<label for="name">Please enter your name</label> 
+		<input name="name" type="text" /> 
+		<input type="submit" />
+	</form>
+</body>
 </html>
