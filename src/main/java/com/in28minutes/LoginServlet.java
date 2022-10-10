@@ -1,6 +1,7 @@
 package com.in28minutes;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet {
 
-	UserValidationService userValidationService = new UserValidationService();
+//	UserValidationService userValidationService = new UserValidationService();
+	private UserValidationService userValidationService;
+	
+	public LoginServlet() {
+		this.userValidationService = new UserValidationService();
+	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
