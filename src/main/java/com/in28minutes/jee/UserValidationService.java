@@ -1,4 +1,4 @@
-package com.in28minutes;
+package com.in28minutes.jee;
 import java.util.HashMap;
 
 public class UserValidationService {
