@@ -10,6 +10,6 @@ public class LoginController {
 	@RequestMapping(value = "/login")
 	@ResponseBody
 	public String sayHello() {
-		return "Hello World";
+		return "a new string";
 	}
 }
