@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	<form action="/login.do" method="post">
+	<form action="/api/login" method="post">
 		<label for="name">Please enter your name:</label> 
 		<input name="name" type="text" /> 
 		<label for="password">Please enter your password:</label> 
