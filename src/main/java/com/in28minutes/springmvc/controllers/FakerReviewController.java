@@ -7,30 +7,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.gson.Gson;
 import com.in28minutes.springmvc.models.FakerReview;
 
 @RestController
 public class FakerReviewController {
-	
+
 	@RequestMapping(value = "/fakerreview", method = RequestMethod.GET)
-	public String getFakerReview() {
-		Gson gson = new Gson();
+	public FakerReview getFakerReview() {
 		FakerReview fakerReview = new FakerReview();
-		return gson.toJson(fakerReview);
+		return fakerReview;
 	}
-	
+
 	@RequestMapping(value = "/fakerreviews", method = RequestMethod.GET)
-	public List<String> getFiveFakerReviews() {
-		List<String> fakerReviews = new ArrayList<String>();
-		
-		for(int i = 0; i < 5; i++) {
-			Gson gson = new Gson();
+	public List<FakerReview> getFiveFakerReviews() {
+		List<FakerReview> fakerReviews = new ArrayList<FakerReview>();
+
+		for (int i = 0; i < 5; i++) {
 			FakerReview fakerReview = new FakerReview();
-			fakerReviews.add(gson.toJson(fakerReview));
+			fakerReviews.add(fakerReview);
 		}
-		
+
 		return fakerReviews;
 	}
-	
+
 }
